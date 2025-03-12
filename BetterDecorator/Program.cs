@@ -19,14 +19,8 @@ namespace BetterDecor
         /// <param name=args>String, Character and Integer given in the console</param>
         private static void Main(string[] args)
         {   
-            int x = 0;
 
-            foreach (string arg in args)
-            {
-                x += x;
-                return;
-            }
-            if (x == 3)
+            if (args.Length == 3)
             {
                 ///Converts each input into the correct format (String, Character, Integer)
                 string s = args[0];
@@ -35,7 +29,7 @@ namespace BetterDecor
 
                 Console.WriteLine(Decor(s, dec, n)); /// Writes the sentence with the character by it's side
             }
-            else if (x == 0)
+            else if (args.Length == 0)
             {
                 Console.WriteLine(Decor("User did not specify args!", '=', 3));
             }   
