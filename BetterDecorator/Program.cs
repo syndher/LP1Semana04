@@ -5,6 +5,10 @@ using System.Runtime.CompilerServices;
 
 namespace BetterDecor
 {
+    /// <summary>
+    /// Writes a sentence with characters by it's side separated by a space,
+    /// the character and the amount of characters can be manually chosen by the user
+    /// </summary>
     class Program
     {
         /// <summary>
