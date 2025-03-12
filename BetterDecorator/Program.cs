@@ -8,12 +8,9 @@ namespace BetterDecor
     class Program
     {
         /// <summary>
-        /// Writes a sentence with characters by it's side, the number of charaters
-        /// depends on the value of the integer given
+        /// Converts the input given into different variables and writes the sentence on the console
         /// </summary>
-        /// <param name=s>String given by the user</param>
-        /// <param name=dec>Character given by the user</param>
-        /// <param name=n>Integer given by the user</param>
+        /// <param name=args>String, Character and Integer given in the console</param>
         private static void Main(string[] args)
         {
             ///Converts each input into the correct format (String, Character, Integer)
@@ -31,7 +28,7 @@ namespace BetterDecor
         /// <param name="s">String given by the user</param>
         /// <param name="dec">Character given by the user</param>
         /// <param name="n">Integer given by the user</param>
-        /// <returns>The sentence with the right amount of characters</returns>
+        /// <returns>The sentence with "n" amount of characters</returns>
         private static string Decor(string s, char dec, int n)
             {
                 string decs = "";
