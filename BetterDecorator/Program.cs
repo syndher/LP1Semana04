@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace BetterDecor
@@ -16,15 +18,27 @@ namespace BetterDecor
         /// </summary>
         /// <param name=args>String, Character and Integer given in the console</param>
         private static void Main(string[] args)
-        {
-            ///Converts each input into the correct format (String, Character, Integer)
-            string s = args[0];
-            char dec = char.Parse(args[1]);
-            int n = int.Parse(args[2]);
-            
-                
+        {   
+            int x = 0;
 
-         Console.WriteLine(Decor(s, dec, n));   /// Writes the sentence with the character by it's side
+            foreach (string arg in args)
+            {
+                x += x;
+                return;
+            }
+            if (x == 3)
+            {
+                ///Converts each input into the correct format (String, Character, Integer)
+                string s = args[0];
+                char dec = char.Parse(args[1]);
+                int n = int.Parse(args[2]);
+
+                Console.WriteLine(Decor(s, dec, n)); /// Writes the sentence with the character by it's side
+            }
+            else if (x == 0)
+            {
+                Console.WriteLine(Decor("User did not specify args!", '=', 3));
+            }   
         }
         /// <summary>
         /// 
@@ -37,6 +51,7 @@ namespace BetterDecor
             {
                 string decs = "";
                 int i;
+
                 for (i = 0; i < n; i++) ///Creates a new string with "n" characters by it's side
                     {
                         decs += dec;
