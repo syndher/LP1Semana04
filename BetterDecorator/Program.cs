@@ -29,9 +29,9 @@ namespace BetterDecor
 
                 Console.WriteLine(Decor(s, dec, n)); /// Writes the sentence with the character by it's side
             }
-            else if (args.Length == 0)
+            else
             {
-                Console.WriteLine(Decor("User did not specify args!", '=', 3));
+                Console.WriteLine(Decor());
             }   
         }
         /// <summary>
@@ -52,5 +52,9 @@ namespace BetterDecor
                     }
                 return $"{decs} {s} {decs}"; 
             }
-    }
+        private static string Decor()
+        {
+            return Decor("User did not specify args!", '=', 3);
+        }
+    }    
 }
